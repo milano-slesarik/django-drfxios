@@ -63,7 +63,7 @@ class DrfXios {
             };
             // deleteModel
             DrfXios.prototype['delete' + modelCapitalized] = id => {
-                var url = self.getDetailUrl(model,id)
+                var url = self.getUrl(model,id)
                 return axios.delete(url)
             };
             // createModel
