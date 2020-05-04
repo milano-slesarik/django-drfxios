@@ -1,0 +1,14 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+django_drfxios.egg-info/PKG-INFO
+django_drfxios.egg-info/SOURCES.txt
+django_drfxios.egg-info/dependency_links.txt
+django_drfxios.egg-info/top_level.txt
+drfxios/__init__.py
+drfxios/apps.py
+drfxios/context_processors.py
+drfxios/migrations/__init__.py
+drfxios/static/drfxios/drfxios.js
+drfxios/static/drfxios/test.html
