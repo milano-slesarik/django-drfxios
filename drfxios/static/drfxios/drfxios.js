@@ -58,7 +58,7 @@ class DrfXios {
             };
             // getModelDetail
             DrfXios.prototype['get' + modelCapitalized] = function (id) {
-                var url = self.getUrl(id)
+                var url = self.getUrl(model,id)
                 return axios.get(url)
             };
             // deleteModel
