@@ -13,7 +13,7 @@ def drfxios(request):
     r = router.registry
     models_list = [x[0] for x in r]
     return {
-        'DRFWRAPPER': {
+        'DRFXIOS': {
             'MODELS_LIST': json.dumps(models_list)
         }
     }
