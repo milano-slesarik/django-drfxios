@@ -7,11 +7,47 @@ DrfXios
 Quick start
 -----------
 
-pip install django-drfxios
+>>> pip install django-drfxios
 
-add drfxios to the settings.INSTALLED_APPS
+**settings.INSTALLED_APPS**
 
-add ...drfxios.context_processors.drfxios... into the context_processors
+.. code-block:: python
+
+    INSTALLED_APPS = [
+        ...
+        'drfxios',
+        ...
+    ]
+
+**settings.py**
+
+.. code-block:: python
+
+    DRFXIOS_ROUTER_PATH = "<dotted.path.to.router>" # eg "api.urls.router"
+
+**context_processors**
+
+.. code-block:: python
+
+    TEMPLATES = [
+        {
+            ...
+            'OPTIONS': {
+                'context_processors': [
+                    ...
+                    'drfxios.context_processors.drfxios',
+                    ...
+                ],
+            },
+        },
+    ]
+
+
+
+
+
+
+
 
 **base.html**
 
