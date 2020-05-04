@@ -4,7 +4,7 @@ axios.defaults.xsrfHeaderName = "X-CSRFTOKEN"; // so we will not need to add csr
 function capitalize(text){
     // in: "some_string"
     // out: "Some_string"
-    return text.charAt(0).toUpperCase() + this.slice(1);
+    return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function camelCaseize(text) {
