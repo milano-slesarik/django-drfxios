@@ -54,11 +54,11 @@ class DrfXios {
                     params: params
                 };
 
-                return axios.get(self.getBaseListUrl(model), request)
+                return axios.get(self.getUrl(model), request)
             };
             // getModelDetail
             DrfXios.prototype['get' + modelCapitalized] = function (id) {
-                var url = self.getDetailUrl(id)
+                var url = self.getUrl(id)
                 return axios.get(url)
             };
             // deleteModel
@@ -68,30 +68,25 @@ class DrfXios {
             };
             // createModel
             DrfXios.prototype['create' + modelCapitalized] = data => {
-                var url = self.getDetailUrl(model)
+                var url = self.getUrl(model)
                 return axios.post(url, data)
             };
             // updateModel
             DrfXios.prototype['update' + modelCapitalized] = (data, id = null) => {
-                var url = self.getDetailUrl(model, id !== null ? id : data.id);
+                var url = self.getUrl(model, id !== null ? id : data.id);
                 return axios.put(url, data)
             };
             // patchModel
             DrfXios.prototype['patch' + modelCapitalized] = (data, id = null) => {
-                var url = self.getDetailUrl(model, id !== null ? id : data.id);
+                var url = self.getUrl(model, id !== null ? id : data.id);
                 return axios.patch(url, data)
             };
         }
     }
 
-    getDetailUrl(model, id = null) {
+    getUrl(model, id = null) {
         model = model.toLowerCase(); // ensure model name is in lowercase
         return urljoin('/', this.urlPrefix, model, id ? id + '/' : '/')
-    }
-
-    getBaseListUrl(model) {
-        model = model.toLowerCase(); // ensure model name is in lowercase
-        return urljoin('/', this.urlPrefix, model + '-list', '/')
     }
 }
 
