@@ -72,4 +72,4 @@ Example::
     dx.updateModel(<data:obj>)
     dx.patchModel(<data:obj>)
 
-All methods return JavaScript promises so you can concat .then, .catch and .finally
+All methods return JavaScript promises so you can use `.then`, `.catch` and `.finally` methods.

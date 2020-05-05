@@ -15,11 +15,47 @@ Description: =======
         Quick start
         -----------
         
-        pip install django-drfxios
+        >>> pip install django-drfxios
         
-        add drfxios to the settings.INSTALLED_APPS
+        **settings.INSTALLED_APPS**
         
-        add ...drfxios.context_processors.drfxios... into the context_processors
+        .. code-block:: python
+        
+            INSTALLED_APPS = [
+                ...
+                'drfxios',
+                ...
+            ]
+        
+        **settings.py**
+        
+        .. code-block:: python
+        
+            DRFXIOS_ROUTER_PATH = "<dotted.path.to.router>" # eg "api.urls.router"
+        
+        **context_processors**
+        
+        .. code-block:: python
+        
+            TEMPLATES = [
+                {
+                    ...
+                    'OPTIONS': {
+                        'context_processors': [
+                            ...
+                            'drfxios.context_processors.drfxios',
+                            ...
+                        ],
+                    },
+                },
+            ]
+        
+        
+        
+        
+        
+        
+        
         
         **base.html**
         
@@ -44,7 +80,7 @@ Description: =======
             dx.updateModel(<data:obj>)
             dx.patchModel(<data:obj>)
         
-        All methods return JavaScript promises so you can concat .then, .catch and .finally
+        All methods return JavaScript promises so you can use `.then`, `.catch` and `.finally` methods.
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
 Classifier: Framework :: Django
