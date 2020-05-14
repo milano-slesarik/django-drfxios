@@ -4,6 +4,12 @@ DrfXios
 
 **DrfXios** simplifies communication between frontend and Django Rest Framework API.
 
+
+
+Medium article about **DrfXios** - https://medium.com/@milslesarik/easy-axios-django-rest-framework-communication-9cc6180107de
+
+
+
 Quick start
 -----------
 
